@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redireccionando a WhatsApp...</title>
+  <script>
+    // Redirigir inmediatamente sin esperar a DOMContentLoaded
+    (function() {
+      // Número de WhatsApp corregido
+      const phone = "59177948681";
+      
+      // Mensaje predeterminado actualizado
+      const message = encodeURIComponent("Quiero reservar una cita");
+      
+      // Crear enlace final
+      const redirectUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
+      
+      // Redirigir inmediatamente
+      window.location.href = redirectUrl;
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirigiendo a WhatsApp...</p>
+  
+  <!-- Fallback por si JavaScript está deshabilitado -->
+  <noscript>
+    <p>JavaScript está deshabilitado. Por favor, 
+    <a href="https://api.whatsapp.com/send?phone=59177948681&text=Quiero%20reservar%20una%20cita">
+      haz clic aquí para contactar por WhatsApp
+    </a>.</p>
+  </noscript>
+</body>
+</html>
